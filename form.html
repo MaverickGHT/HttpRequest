@@ -12,7 +12,7 @@
     }
 
     function allerta () {
-        alert("Nome: " + document.getElementById("fname").children[0].value);
+        alert("Nome: " + document.getElementById("nome").children[0].value + " cognome: " + document.getElementById("cognome").children[0].value);
     }
 
 </script>
@@ -22,9 +22,13 @@
     </form>
     <form method="post" action="http://192.168.200.255/form"  onsubmit={allerta()}>
         <label for="fname">First name:</label><br>
+        <div id="nome">
         <input type="text" id="fname" name="fname" value="John"><br>
+    </div>
         <label for="lname">Last name:</label><br>
+        <div id="cognome">
         <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    </div>
         <input type="submit" value="Submit">
       </form> 
 </body>
